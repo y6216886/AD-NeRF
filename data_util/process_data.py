@@ -9,7 +9,7 @@ import os
 from sklearn.neighbors import NearestNeighbors
 from pathlib import Path
 import argparse
-
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 def euler2rot(euler_angle):
     batch_size = euler_angle.shape[0]
     theta = euler_angle[:, 0].reshape(-1, 1, 1)
